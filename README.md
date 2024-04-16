@@ -23,3 +23,5 @@ erreur et ainsi pouvoir les corriger.
 - Pouvoir récupérer le détail d'une todo via son UUID, si la todo n'existe pas, retourner un code HTTP 404
 - Pouvoir compléter une todo
 - Pouvoir supprimer une todo et qu'elle ne figure plus dans le fichier des todos, ainsi que retourner un code HTTP No Content
+
+**⚠️ Les tests unitaires ne doivent pas impacter les données déjà présentes**
