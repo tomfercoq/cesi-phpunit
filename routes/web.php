@@ -13,6 +13,8 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/api/todos', ['as' => 'todos.index', 'uses' => 'TodoController@index']);
+$router->post('/api/todos', ['as' => 'todos.store', 'uses' => 'TodoController@store']);
+$router->get('/api/todos/{uuid}', ['as' => 'todos.show', 'uses' => 'TodoController@show']);
+$router->patch('/api/todos/{uuid}/complete', ['as' => 'todos.complete', 'uses' => 'TodoController@complete']);
+$router->delete('/api/todos/{uuid}', ['as' => 'todos.destroy', 'uses' => 'TodoController@destroy']);
